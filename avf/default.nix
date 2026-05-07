@@ -68,7 +68,9 @@ with lib;
       extraFiles = mkOption {
         description = "Extra files to include in the image";
         type = types.attrsOf types.path;
-        default = { };
+        default = {
+          "replace.sh" = ../initial/replace.sh;
+        };
         example = {
           "README.md" = ../README.md;
         };
